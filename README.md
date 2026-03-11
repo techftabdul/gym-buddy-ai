@@ -53,19 +53,19 @@ npm run dev
 ### Landing Page
 
 <p align="center">
-  <img src="screenshots/Landing-Page.png" width="700"/>
+  <img src="screenshots/landing-page.png" width="700"/>
 </p>
 
 ### Responsive View
 
 <p align="center">
-  <img src="screenshots/Responsive-View.png" width="700"/>
+  <img src="screenshots/responsive-view.png" width="700"/>
 </p>
 
 ### Workout Card
 
 <p align="center">
-  <img src="screenshots/Workout-Card.png" width="700"/>
+  <img src="screenshots/workout-card.png" width="700"/>
 </p>
 
 ## 🧠 How It Works
