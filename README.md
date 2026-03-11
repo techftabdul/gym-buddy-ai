@@ -2,7 +2,6 @@
 
 Gym Buddy is an AI-powered workout generator that creates a personalized 7-day gym routine based on a user's fitness goals.
 
-
 ## 🌐 Live Demo
 
 [Live Demo Link](https://gym-buddy-ai.netlify.app/)
@@ -54,19 +53,19 @@ npm run dev
 ### Landing Page
 
 <p align="center">
-  <img src="assets/Landing-Page.png" width="700"/>
+  <img src="screenshots/Landing-Page.png" width="700"/>
 </p>
 
 ### Responsive View
 
 <p align="center">
-  <img src="assets/Responsive-View.png" width="700"/>
+  <img src="screenshots/Responsive-View.png" width="700"/>
 </p>
 
 ### Workout Card
 
 <p align="center">
-  <img src="assets/Workout-Card.png" width="700"/>
+  <img src="screenshots/Workout-Card.png" width="700"/>
 </p>
 
 ## 🧠 How It Works
