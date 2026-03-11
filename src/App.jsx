@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { generateWorkoutPlan } from './api/gemini';
 import WorkoutForm from './components/WorkoutForm';
 import WorkoutPlan from './components/WorkoutPlan';
 import './index.css';
@@ -13,22 +13,11 @@ function App() {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await axios.post('http://localhost:3001/api/generate-plan', formData);
-      setPlan(response.data.plan);
+      const planData = await generateWorkoutPlan(formData);
+      setPlan(planData);
     } catch (err) {
-      console.log("SERVER ERROR DATA:", err.response?.data);
-      console.log("FULL ERROR:", err);
-      console.error(err);
-
-      let errorMessage;
-      if (err.code === 'ERR_NETWORK' || !err.response) {
-        errorMessage = 'Cannot connect to server. Make sure the backend is running: node server.js';
-      } else if (err.response?.data?.error) {
-        errorMessage = `Server error: ${err.response.data.error}`;
-      } else {
-        errorMessage = 'Failed to generate plan. Please try again.';
-      }
-      setError(errorMessage);
+      console.error('Plan generation error:', err);
+      setError(err.message || 'Failed to generate plan. Please try again.');
     } finally {
       setIsLoading(false);
     }
